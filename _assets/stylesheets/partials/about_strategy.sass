@@ -1,0 +1,177 @@
+$module: about-strategy
+
+.#{$module}-section
+  +vertical-middle-cont
+  text-align: center
+  overflow: hidden
+  height: 100%
+  padding-bottom: 120px
+
+.#{$module}__content
+  +vertical-middle-item
+  text-align: left
+
+.#{$module}__top
+  +make-row($gutter: 30px)
+  width: 936px - 65px*2 + 30px*2
+  margin-left: auto
+  margin-right: auto
+  margin-top: 30px
+  margin-bottom: 100px
+
+.#{$module}__top-column
+  +make-md-column(6, $gutter: 30px)
+
+.#{$module}__circle-back
+  position: relative
+  height: 0
+  visibility: hidden
+  &.actve
+    visibility: visible
+  &:after
+    content: ' '
+    position: absolute
+    left: -120px
+    top: 60px
+    width: 100px
+    height: 100px
+    background: url(images/about/about_arrow.svg) 0 0 no-repeat
+    cursor: pointer
+
+.#{$module}__circle
+  position: relative
+  overflow: hidden
+
+.#{$module}__start
+  position: relative
+  width: 936px
+  height: 510px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 30px
+  background: url(images/about/004.png) 50% 50% no-repeat
+  +background-contain
+
+.#{$module}__start__title
+  position: absolute
+  width: 140px
+  left: 50%
+  top: 50%
+  margin-top: -14px
+  margin-left: -70px
+  color: #FFF
+  text-align: center
+  font-size: 18px
+
+.#{$module}__start__link
+  position: absolute
+  width: 200px
+  cursor: pointer
+  &[data-id="1"]
+    left: 65px
+    top: 30px
+  &[data-id="2"]
+    left: 65px
+    bottom: 30px
+  &[data-id="3"]
+    right: 65px
+    top: 30px
+  &[data-id="4"]
+    right: 65px
+    bottom: 30px
+
+.#{$module}__start__link__title
+  font-size: 20px
+  font-weight: 500
+  span
+    border-bottom: 1px dashed $gray-light
+  &:hover
+    color: $elfidel-color--1
+    span
+      border-bottom-color: $elfidel-color--1
+
+.#{$module}__start__link__text
+  color: $gray-light
+  font-size: 12px
+  margin-top: 20px
+
+.#{$module}__block
+  position: absolute
+  right: 100%
+  top: 0
+  width: 100%
+  height: 100%
+  +transition(transform 400ms)
+  background-color: #FFF
+  padding: 30px 0 30px 50px
+
+.#{$module}__block__content
+  position: relative
+  height: 100%
+
+.no-csstransforms.no-csstransforms3d
+  .#{$module}__block
+    &.active
+      right: 0
+
+.csstransforms.no-csstransforms3d
+  .#{$module}__block
+    &.active
+      +transform(translateX(100%))
+
+.csstransforms.csstransforms3d
+  .#{$module}__block
+    &.active
+      +transform(translate3d(100%,0,0))
+
+.#{$module}__block__info
+  position: absolute
+  left: 0
+  top: 0
+  width: 33%
+  height: 100%
+
+.#{$module}__block__info__title
+  padding-right: 40px
+  font-size: 40px
+  line-height: 1
+
+.#{$module}__block__info__text
+  padding-right: 105px
+  color: $gray-light
+  font-size: 12px
+  margin-top: 55px
+
+.#{$module}__block__part
+  position: absolute
+  width: 33.33%
+  height: 50%
+  padding: 0 10px 10px 105px
+  &:after
+    content: attr(data-part-id)
+    position: absolute
+    left: 40px
+    top: -30px
+    color: $gray-light
+    font-size: 12px
+  &[data-part-id="1"]
+    left: 33.33%
+    top: 0
+  &[data-part-id="2"]
+    left: 66.66%
+    top: 0
+  &[data-part-id="3"]
+    left: 33.33%
+    top: 50%
+  &[data-part-id="4"]
+    left: 66.66%
+    top: 50%
+
+.#{$module}__block__part__title
+  font-size: 20px
+  font-weight: 500
+
+.#{$module}__block__part__text
+  color: $gray-light
+  font-size: 12px
+  margin-top: 20px

@@ -1,0 +1,54 @@
+$module: projects-slider
+
+.#{$module}-section
+  overflow: hidden
+  .bx-wrapper
+    position: relative
+  .bx-controls
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+  .bx-prev,
+  .bx-next
+    position: absolute
+    top: -11px
+    width: 42px
+    height: 22px
+  .bx-prev
+    left: 0
+    background: url(images/arrow_left.svg) 0 0 no-repeat
+  .bx-next
+    right: 0
+    background: url(images/arrow_right.svg) 0 0 no-repeat
+
+.#{$module}-section_black
+  @extend .#{$module}-section
+  background-color: #000
+  .#{$module}__title
+    color: #FFF
+
+.#{$module}__title
+  font-size: 28px
+  color: #444
+  text-align: center
+  margin-top: 100px
+  margin-bottom: 100px
+  font-weight: normal
+
+.#{$module}-list__wrapper
+  position: relative
+  text-align: center
+  width: 1200px
+  max-width: 96%
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 100px
+  padding-left: 60px
+  padding-right: 60px
+
+.#{$module}-item
+  display: inline-block
+  margin-left: 5px
+  margin-right: 5px
+  margin-bottom: 30px

@@ -1,0 +1,83 @@
+.mail-form
+  position: absolute
+  bottom: 0
+  width: 400px
+  height: 405px
+  padding: 20px
+  background-color: #FDFDFD
+  @media only screen and (max-width: 1199px)
+    right: 50px
+  @media only screen and (min-width: 1200px)
+    right: 200px
+  textarea
+    height: 278px
+
+.mail-file-label
+  display: inline-block
+  position: relative
+  padding-left: 45px
+  cursor: pointer
+  text-decoration: underline
+  font-size: 12px
+  font-weight: normal
+  margin-bottom: 20px
+  &:hover
+    text-decoration: none
+  &:before
+    content: '+'
+    position: absolute
+    left: 8px
+    top: -8px
+    color: $elfidel-color--1
+    font-size: 40px
+    line-height: 1
+    font-weight: 300
+
+.mail-file-input-block
+  position: relative
+  margin-bottom: 10px
+  padding-right: 40px
+
+.mail-file-input-delete
+  position: absolute
+  right: 0
+  top: 0
+  cursor: pointer
+  width: 22px
+  height: 22px
+  &:before
+    width: 22px
+    height: 22px
+    line-height: 22px
+    display: inline-block
+    text-align: center
+
+.mail-form-plane
+  position: absolute
+  right: -8px
+  bottom: 58px
+  width: 35px
+  height: 40px
+  background: url(images/plane.svg) 0 0 no-repeat
+  background-size: 35px auto
+  &.active
+    +animation(fly 1400ms linear forwards)
+
++keyframes(fly)
+  0%
+    +transform(translate3d(0px,0px,0))
+    opacity: 1
+  100%
+    +transform(translate3d(300px,-300px,0))
+    opacity: 0
+
+.btn-mail-form
+  @extend .btn
+  @extend .btn-link
+  position: absolute
+  right: -155px
+  bottom: 62px
+  font-size: 16px
+  color: $text-color
+  &:hover
+    color: $text-color

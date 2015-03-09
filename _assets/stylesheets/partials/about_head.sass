@@ -1,0 +1,83 @@
+$module: about-head
+
+.#{$module}-section
+  +vertical-middle-cont
+  position: relative
+  text-align: center
+  overflow: hidden
+  height: 100vh
+
+.#{$module}__content
+  position: relative
+  +vertical-middle-item
+  width: 600px
+  max-width: 90%
+  &:after
+    content: ' '
+    position: absolute
+    right: 40px
+    top: -80px
+    width: 35px
+    height: 35px
+    background: url(images/star.svg) 0 0 no-repeat
+    background-size: 35px auto
+
+.#{$module}__title
+  font-size: 36px
+  font-weight: 300
+  margin-bottom: 80px
+
+.#{$module}__text
+  font-size: 18px
+
+.#{$module}__logo
+  position: absolute
+  z-index: 2
+  left: 42px
+  top: 34px
+  fill: #FFF
+  width: 200px
+  height: 100px
+  background: url(images/logo.svg) 0 0 no-repeat
+  background-size: 137px auto
+  text-indent: -9999px
+
+.#{$module}__copy
+  position: absolute
+  z-index: 2
+  left: 30px
+  bottom: 30px
+  font-size: 20px
+  line-height: 1.5
+  font-weight: 500
+  text-align: left
+  &:after
+    content: ' '
+    position: absolute
+    right: 0
+    top: 13px
+    width: 50px
+    height: 4px
+    background-color: $elfidel-color--1
+
+.#{$module}__social
+  position: absolute
+  z-index: 2
+  right: 45px
+  bottom: 45px
+  font-size: 20px
+  font-weight: 500
+  text-align: left
+  a
+    color: $text-color
+    margin-left: 22px
+
+.#{$module}__hint
+  position: absolute
+  bottom: 100px
+  left: 50%
+  height: 22px
+  width: 42px
+  margin-left: -21px
+  background: url(images/arrow.svg) 0 0 no-repeat
+  +transform(rotate(-90deg))

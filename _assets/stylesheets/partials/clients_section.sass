@@ -1,0 +1,63 @@
+$module: clients-section
+
+.#{$module}
+  background-color: #FFF
+  padding-top: 137px
+  padding-bottom: 80px
+  .bx-wrapper
+    position: relative
+  .bx-controls
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+  .bx-prev,
+  .bx-next
+    position: absolute
+    top: -11px
+    width: 42px
+    height: 22px
+  .bx-prev
+    left: 0
+    background: url(images/arrow_left.svg) 0 0 no-repeat
+  .bx-next
+    right: 0
+    background: url(images/arrow_right.svg) 0 0 no-repeat
+
+.#{$module}__title
+  font-size: 28px
+  color: #444
+  text-align: center
+  margin-bottom: 50px
+  font-weight: normal
+
+.clients-list-wrapper
+  width: 1200px
+  max-width: 90%
+  margin: 0 auto
+  height: 300px
+
+.clients-list
+  height: 300px
+
+.clients-item
+  position: relative
+  height: 100%
+
+.clients-item__left
+  position: absolute
+  left: 0
+  top: 0
+  width: 50%
+  height: 100%
+  +my-flex-center
+
+.clients-item__right
+  position: absolute
+  right: 0
+  top: 0
+  width: 50%
+  height: 100%
+  padding-left: 60px
+  padding-right: 60px
+  +my-flex-center

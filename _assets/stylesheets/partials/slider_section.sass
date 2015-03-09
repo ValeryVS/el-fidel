@@ -1,0 +1,140 @@
+$module: slider-section
+
+.#{$module}
+  overflow: hidden
+
+.#{$module}__logo
+  position: absolute
+  z-index: 2
+  left: 42px
+  top: 34px
+  width: 200px
+  height: 100px
+  background: url(images/logo_white.svg) 0 0 no-repeat
+  background-size: 137px auto
+  text-indent: -9999px
+
+.#{$module}__copy
+  position: absolute
+  z-index: 2
+  left: 30px
+  bottom: 30px
+  color: #FFF
+  font-size: 20px
+  line-height: 1.5
+  font-weight: 500
+  &:after
+    content: ' '
+    position: absolute
+    right: 0
+    top: 13px
+    width: 50px
+    height: 4px
+    background-color: $elfidel-color--1
+
+.#{$module}__social
+  position: absolute
+  z-index: 2
+  right: 45px
+  bottom: 45px
+  font-size: 20px
+  font-weight: 500
+  a
+    color: #FFF
+    margin-left: 22px
+
+.slider-list
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+
+.slider-item
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  text-align: center
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  +background-cover
+  opacity: 0
+  &.prev
+    z-index: 1
+    opacity: 1
+    .slider-item__content
+      display: none
+  &.active
+    z-index: 2
+    +animation(fadeIn 400ms linear forwards)
+  &:before
+    content: ' '
+    display: inline-block
+    width: 0
+    height: 100%
+    vertical-align: middle
+    margin-left: -0.25em
+
+.slider-list__menu
+  position: absolute
+  z-index: 3
+  left: 50%
+  width: 50%
+  margin-left: -25%
+  bottom: 50px
+  text-align: center
+
+$slider-list__menu-item--size: 12px
+$slider-list__menu-item--bullet-size: 8px
+$slider-list__menu-item--bullet-small-size: 4px
+$slider-list__menu-item--margin: 10px
+
+.slider-list__menu-item
+  position: relative
+  display: inline-block
+  width: $slider-list__menu-item--size
+  height: $slider-list__menu-item--size
+  margin-right: $slider-list__menu-item--margin
+  cursor: pointer
+  &:after
+    content: ' '
+    display: block
+    position: absolute
+    left: 50%
+    top: 50%
+    background-color: #fff
+    width: $slider-list__menu-item--bullet-small-size
+    height: $slider-list__menu-item--bullet-small-size
+    margin-left: -$slider-list__menu-item--bullet-small-size/2
+    margin-top: -$slider-list__menu-item--bullet-small-size/2
+    +border-radius($slider-list__menu-item--bullet-small-size/2)
+  &:last-child
+    margin-right: 0
+  &.active
+    &:after
+      width: $slider-list__menu-item--bullet-size
+      height: $slider-list__menu-item--bullet-size
+      margin-left: -$slider-list__menu-item--bullet-size/2
+      margin-top: -$slider-list__menu-item--bullet-size/2
+      +border-radius($slider-list__menu-item--bullet-size/2)
+
+.slider-item__content
+  display: inline-block
+  vertical-align: middle
+  color: #FFF
+  h1
+    font-size: 54px
+    font-weight: 900
+    margin-bottom: 20px
+  p
+    font-size: 19px
+  a
+    margin-top: 20px
+    border: 1px solid #FFF
+    color: #FFF
+    padding: 10px 42px
+    +border-radius(21px)
+    &:hover
+      color: #FFF

@@ -1,0 +1,102 @@
+$project-info--width: 1000px
+$project-next--width: 400px
+
+.project-end-section
+  width: $project-info--width + $project-next--width
+
+$module: project-info
+
+.#{$module}-section
+  position: absolute
+  left: 0
+  top: 0
+  width: $project-info--width
+  height: 100%
+
+.#{$module}__top
+  position: absolute
+  left: 25px
+  bottom: 250px
+  width: 900px
+  height: 300px
+
+.#{$module}__top__left
+  +vertical-align-cont(bottom)
+  position: relative
+  float: left
+  width: 480px
+  height: 100%
+
+.#{$module}__top__left__title
+  position: absolute
+  left: 0
+  top: 0
+  font-size: 32px
+  font-weight: 500
+
+.#{$module}__top__left__content
+  +vertical-align-item(bottom)
+  font-size: 18px
+
+.#{$module}__top__right
+  +vertical-align-cont(bottom)
+  position: relative
+  float: right
+  width: 255px
+  height: 100%
+
+.#{$module}__top__right__title
+  position: absolute
+  left: 0
+  top: 0
+  a
+    color: $text-color
+    text-decoration: underline
+    &:hover
+      color: $text-color
+      text-decoration: none
+
+.#{$module}__top__right__content
+  +vertical-align-item(bottom)
+
+.#{$module}__people
+  position: absolute
+  left: 25px
+  bottom: 20px
+  width: 900px
+  height: 150px
+  padding-left: 185px
+
+.#{$module}__people__title
+  position: absolute
+  left: 0
+  top: 0
+
+.#{$module}__people__item
+  float: left
+  width: 220px
+  height: 50px
+  margin-right: 10px
+  margin-bottom: 50px
+
+$module: project-next
+
+.#{$module}-section
+  position: absolute
+  left: $project-info--width
+  top: 0
+  display: block
+  width: $project-next--width
+  height: 100%
+  overflow: hidden
+  color: #FFF  // replace with individual
+  background-color: $elfidel-color--1  // replace by image
+  +background-cover
+  &:hover
+    color: #FFF  // replace with individual
+
+.#{$module}__text
+  position: absolute
+  left: 25px
+  bottom: 20px
+  height: 150px

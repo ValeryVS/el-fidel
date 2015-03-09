@@ -1,0 +1,16 @@
+$sprites: sprite-map("sprite/*.png")
+$sprites-retina: sprite-map("sprite-2x/*.png")
+
+@mixin sprite($name)
+  background-image: sprite-url($sprites)
+  background-position: sprite-position($sprites, $name)
+  background-repeat: no-repeat
+  display: inline-block
+  height: image-height(sprite-file($sprites, $name))
+  width: image-width(sprite-file($sprites, $name))
+  @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx)
+    $ypos: round(nth(sprite-position($sprites-retina, $name), 2) / 2)
+    background-position: 0 $ypos
+    // Grab size of non-retina sprite image.
+    @include background-size(image-width(sprite-path($sprites)) image-height(sprite-path($sprites)))
+    background-image: sprite-url($sprites-retina)

@@ -1,0 +1,242 @@
+$module: projects-section
+
+.#{$module}
+  height: 1650px
+  +background-cover
+
+.#{$module}__title
+  position: absolute
+  top: 154px
+  left: 50%
+  font-size: 30px
+  color: #FFF
+  @media only screen and (max-width: 1199px)
+    margin-left: 50px
+  @media only screen and (min-width: 1200px)
+    margin-left: 200px
+
+.#{$module}__text
+  position: absolute
+  top: 290px
+  left: 50%
+  line-height: 2.2
+  width: 400px
+  color: #FFF
+  @media only screen and (max-width: 1199px)
+    margin-left: 50px
+  @media only screen and (min-width: 1200px)
+    margin-left: 200px
+
+.#{$module}__link-all
+  position: absolute
+  left: 100px
+  bottom: 140px
+  color: #FFF
+  font-size: 28px
+  &:hover
+    color: #FFF
+  &:before
+    content: 'F'
+    position: absolute
+    left: -65px
+    top: -3px
+    width: 34px
+    height: 34px
+    text-align: center
+    line-height: 34px
+    font-size: 18px
+    font-weight: bold
+    +border-radius(6px)
+    background-color: $elfidel-color--1
+
+.#{$module}__link-all__count
+  display: block
+  position: absolute
+  left: 100%
+  bottom: 100%
+  margin-left: 15px
+  margin-bottom: 7px
+  color: #777
+  font-size: 16px
+
+$module: projects-item
+
+.#{$module}
+  position: absolute
+  overflow: hidden
+  +background-cover
+
+%#{$module}__tags
+  position: absolute
+  top: 30px
+
+.#{$module}__tags_right
+  @extend %#{$module}__tags
+  right: 20px
+
+.#{$module}__tags_left
+  @extend %#{$module}__tags
+  left: 20px
+
+%#{$module}__tag
+  display: inline-block
+  line-height: 20px
+  font-size: 12px
+  +border-radius(10px)
+  padding-left: 10px
+  padding-right: 10px
+  border-width: 1px
+  border-style: solid
+  margin-left: 7px
+
+.#{$module}__tag_bright
+  @extend %#{$module}__tag
+  border-color: #FFF
+  color: #FFF
+
+.#{$module}__tag_dark
+  @extend %#{$module}__tag
+  border-color: #000
+  color: #000
+
+.#{$module}__content
+  display: block
+  position: absolute
+  width: 100%
+  height: 100%
+  display: none
+  text-align: center
+  background-color: rgba(0,0,0,0.5)
+  +vertical-middle-cont
+  color: #FFF
+  &:hover
+    color: #FFF
+  span
+    +vertical-middle-item
+  &.top
+    display: block
+    +animation(projects-item-top 400ms forwards)
+  &.top-out
+    display: block
+    +animation(projects-item-top-reverse 400ms forwards)
+  &.right
+    display: block
+    +animation(projects-item-right 400ms forwards)
+  &.right-out
+    display: block
+    +animation(projects-item-right-reverse 400ms forwards)
+  &.bottom
+    display: block
+    +animation(projects-item-bottom 400ms forwards)
+  &.bottom-out
+    display: block
+    +animation(projects-item-bottom-reverse 400ms forwards)
+  &.left
+    display: block
+    +animation(projects-item-left 400ms forwards)
+  &.left-out
+    display: block
+    +animation(projects-item-left-reverse 400ms forwards)
+
++keyframes(projects-item-top)
+  0%
+    +transform(translate3d(0px,-100%,0))
+  100%
+    +transform(translate3d(0px,0%,0))
+
++keyframes(projects-item-top-reverse)
+  0%
+    +transform(translate3d(0px,0%,0))
+  100%
+    +transform(translate3d(0px,-100%,0))
+
++keyframes(projects-item-right)
+  0%
+    +transform(translate3d(100%,0px,0))
+  100%
+    +transform(translate3d(0%,0px,0))
+
++keyframes(projects-item-right-reverse)
+  0%
+    +transform(translate3d(0%,0px,0))
+  100%
+    +transform(translate3d(100%,0px,0))
+
++keyframes(projects-item-bottom)
+  0%
+    +transform(translate3d(0px,100%,0))
+  100%
+    +transform(translate3d(0px,0%,0))
+
++keyframes(projects-item-bottom-reverse)
+  0%
+    +transform(translate3d(0px,0%,0))
+  100%
+    +transform(translate3d(0px,100%,0))
+
++keyframes(projects-item-left)
+  0%
+    +transform(translate3d(-100%,0px,0))
+  100%
+    +transform(translate3d(0%,0px,0))
+
++keyframes(projects-item-left-reverse)
+  0%
+    +transform(translate3d(0%,0px,0))
+  100%
+    +transform(translate3d(-100%,0px,0))
+
+.chief-time
+  top: 300px
+  right: 50%
+  width: 600px
+  height: 500px
+
+.chief-time__title
+  position: absolute
+  left: 0
+  top: 212px
+  width: 100%
+  text-align: center
+  font-size: 46px
+  color: #FFF
+  font-weight: bold
+
+.kinosfera
+  top: 720px
+  right: 50%
+  width: 400px
+  height: 580px
+
+.kinosfera__title
+  position: absolute
+  left: 30px
+  bottom: 70px
+  font-size: 24px
+  color: #FFF
+
+.triumph-park
+  top: 1000px
+  left: 50%
+  width: 400px
+  height: 500px
+
+.triumph-park__title
+  position: absolute
+  left: 30px
+  bottom: 70px
+  font-size: 24px
+  color: #000
+
+.smolensky
+  top: 600px
+  left: 50%
+  width: 600px
+  height: 400px
+
+.smolensky__title
+  position: absolute
+  left: 30px
+  bottom: 70px
+  font-size: 24px
+  color: #000

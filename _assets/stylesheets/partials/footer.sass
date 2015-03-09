@@ -1,0 +1,79 @@
+$module: footer
+
+.#{$module}
+  position: relative
+  height: 150px
+  padding-left: 50px
+  padding-right: 50px
+
+.#{$module}_black
+  @extend .#{$module}
+  background-color: #000
+  .#{$module}__copy
+    color: #FFF
+  .#{$module}__social
+    color: #FFF
+    a
+      color: #FFF
+
+.#{$module}__copy
+  position: absolute
+  z-index: 2
+  left: 30px
+  bottom: 30px
+  font-size: 20px
+  line-height: 1.5
+  font-weight: 500
+  &:after
+    content: ' '
+    position: absolute
+    right: 0
+    top: 13px
+    width: 50px
+    height: 4px
+    background-color: $elfidel-color--1
+
+.#{$module}__social
+  position: absolute
+  z-index: 2
+  right: 45px
+  bottom: 45px
+  font-size: 20px
+  font-weight: 500
+  a
+    color: $text-color
+    margin-left: 22px
+
+.#{$module}_main
+  position: relative
+  height: 300px
+  margin-left: 50px
+  margin-right: 50px
+
+.#{$module}_main__social
+  position: absolute
+  right: 50%
+  top: 123px
+  width: 50%
+  max-width: 600px
+  font-size: 20px
+  font-weight: 500
+  a
+    color: $text-color
+    margin-right: 25%
+
+.#{$module}_main__copy
+  position: absolute
+  left: 50%
+  top: 126px
+  font-size: 20px
+  line-height: 1.5
+  font-weight: 500
+  &:after
+    content: ' '
+    position: absolute
+    right: 0
+    top: 13px
+    width: 50px
+    height: 4px
+    background-color: $elfidel-color--1

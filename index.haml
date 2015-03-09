@@ -1,0 +1,195 @@
+---
+layout: default
+---
+
+.section.slider-section{ :role => "section", "data-size" => "100vh" }
+  %section.slider-list{ :role => "slider" }
+    %article.slider-item.active{ :role => "slider-item", :style => "background-image: url(assets/content/bg1.jpg)" }
+      .slider-item__content
+        %h1 Смоленский пассаж
+        %p разработка сайта и стратегии продвижения
+        %a.btn{ :href => "smolensky.html" } О проекте
+    %article.slider-item.bg1{ :role => "slider-item", :style => "background-image: url(assets/content/bg1.jpg)" }
+      .slider-item__content
+        %h1 Bar 17
+        %p разработка и ведение рекламной компании
+        %a.btn{ :href => "bar17.html" } О проекте
+    / %article.slider-item.bg1{ :role => "slider-item", :style => "background-image: url(assets/content/bg1.jpg)" }
+    /   .slider-item__content
+    /     %h1 Triumph park
+    /     %p разработка и ведение рекламной компании
+    /     %p для жилого комплекса Триумф парк
+    /     %a.btn{ :href => "#" } О проекте
+  %a.slider-section__logo{ :href => "/" } {{ site.title }}
+  .slider-section__copy
+    El Fidel<br>
+    digital agency<br>
+    2014
+  .slider-section__social
+    %a{ :href => "#", :target => "_blank" } Fb
+    %a{ :href => "#", :target => "_blank" } Vk
+    %a{ :href => "#", :target => "_blank" } Tw
+
+%section.section{ :role => "section", "data-inline-scroll" => "advantage" }
+  .show-section{ :role => "show-section" }
+    .show-section__text-wrap
+      .show-section__text
+        .show-section__text__first
+          This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you
+        .show-section__text__second
+          This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files.
+    .show-section__video
+      здесь всавлять видео - закомментировано
+      / <iframe src="//player.vimeo.com/video/105630814?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="600" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      / %video{ :preload => "auto", :controls => "controls" }
+      /   %source{ :src => "assets/video/luxury-yacht-charter-video.mp4" }
+      /   %source{ :src => "assets/video/luxury-yacht-charter-video.ogv" }
+  .advantage-section{ "data-size" => "100vh-scrollr" }
+    .advantage-section__logo
+    .advantage-list{ :role => "advantage-list" }
+      .advantage-item{ :role => "advantage-item" }
+        .advantage-item__content
+          .advantage-item__num 1.
+          .advantage-item__title Интерактивность
+          .advantage-item__text
+            %p Что если существует кто-то, кто создает целый мир коммуникаций, где люди общаются с Вашей компанией в интернете, как будто вживую?
+      .advantage-item{ :role => "advantage-item" }
+        .advantage-item__content
+          .advantage-item__num 2.
+          .advantage-item__title Надежность
+          .advantage-item__text
+            %p Что если существует кто-то, кто всегда добивается высоких результатов и не дает пустых обещаний?
+      .advantage-item{ :role => "advantage-item" }
+        .advantage-item__content
+          .advantage-item__num 3.
+          .advantage-item__title Опыт
+          .advantage-item__text
+            %p Что если существует кто-то, кто за 15 лет провёл более 800 рекламных кампаний для 500 клиентов из 10 стран мира. Кто создал более 300 сайтов и получил 20 наград.
+      .advantage-item{ :role => "advantage-item" }
+        .advantage-item__content
+          .advantage-item__num 4.
+          .advantage-item__title Эффективность
+          .advantage-item__text
+            %p Что если существует кто-то, кто умеет привлекать на сайт тысячи потенциальных клиентов и большую часть превращать в покупателей?
+
+%section.section.projects-section{ :role => "section", :style => "background-image: url(assets/content/bg_projects.png)" }
+  %a{ :name => "projects" }
+  %h1.projects-section__title Наши проекты
+  .projects-section__text
+    %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+  .projects-item.chief-time{ :role => "projects-item", :style => "background-image: url(assets/content/project4.jpg)" }
+    .chief-time__title Chief-Time
+    .projects-item__tags_right
+      .projects-item__tag_dark web
+      .projects-item__tag_dark seo
+    %a.projects-item__content{ :role => "projects-item-content", :href => "#" }
+      %span подробнее
+  .projects-item.kinosfera{ :role => "projects-item", :style => "background-image: url(assets/content/project1.jpg)" }
+    .kinosfera__title Kinosfera
+    .projects-item__tags_right
+      .projects-item__tag_bright app
+      .projects-item__tag_bright web
+    %a.projects-item__content{ :role => "projects-item-content", :href => "#" }
+      %span подробнее
+  .projects-item.triumph-park{ :role => "projects-item", :style => "background-image: url(assets/content/project2.jpg)" }
+    .triumph-park__title Triumph Park
+    .projects-item__tags_left
+      .projects-item__tag_dark web
+      .projects-item__tag_dark branding
+    %a.projects-item__content{ :role => "projects-item-content", :href => "#" }
+      %span подробнее
+  .projects-item.smolensky{ :role => "projects-item", :style => "background-image: url(assets/content/project3.jpg)" }
+    .smolensky__title Smolensky
+    .projects-item__tags_left
+      .projects-item__tag_dark web
+      .projects-item__tag_dark seo
+    %a.projects-item__content{ :role => "projects-item-content", :href => "smolensky.html" }
+      %span подробнее
+  %a.projects-section__link-all{ :href => "#" }
+    Все проекты
+    %span.projects-section__link-all__count 70+
+
+.section{ :role => "section" }
+  %section.clients-section
+    %h1.clients-section__title Клиенты
+    .clients-list-wrapper
+      .clients-list{ :role => "clients-slider" }
+        .clients-item
+          .clients-item__left
+            %img{ :src => "assets/content/client1.jpg" }
+          .clients-item__right
+            %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+        .clients-item
+          .clients-item__left
+            %img{ :src => "assets/content/client1.jpg" }
+          .clients-item__right
+            %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+        .clients-item
+          .clients-item__left
+            %img{ :src => "assets/content/client1.jpg" }
+          .clients-item__right
+            %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+  .people-section
+    %a{ :name => "blog" }
+    %a.blog-update{ :href => "#" }
+    .blog-images__title Настроение
+    .blog-images
+    .blog-post-list__title Блог
+    .blog-post-list
+      .blog-post
+        %img.blog-post__avatar{ :src => "assets/content/avatar1.png" }
+        .blog-post__text
+          %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files.
+        .blog-post__date 28.09
+      .blog-post
+        %img.blog-post__avatar{ :src => "assets/content/avatar2.png" }
+        .blog-post__text
+          %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files.
+        .blog-post__date 28.09
+      .blog-post
+        %img.blog-post__avatar{ :src => "assets/content/avatar3.png" }
+        .blog-post__text
+          %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files.
+        .blog-post__date 28.09
+    .mail-block
+      .mail-block__title
+      %form.mail-form{ :role => "mail-form" }
+        .form-group
+          %input.form-control{ :name => "email", :type => "email", :required => "required", :placeholder => "email" }
+          %span.glyphicon.form-control-feedback
+        .form-group
+          %textarea.form-control{ :name => "message", :required => "required", :placeholder => "Сообщение" }
+        .mail-file-label{ :role => "mailfile-add" } Прикрепить файл
+        .mail-file-list{ :role => "mailfile-cont" }
+        .mail-form-plane{ :role => "plane" }
+        %input.btn-mail-form{ :type => "submit", :value => "Отправить" }
+  .contacts-section
+    %a{ :name => "contacts" }
+    .contacts-section__text-cont
+      .contacts-section__text
+        .contacts-section__mail
+          hello@el-fidel.com
+        .contacts-section__spb{ :role => "offices-link", "data-order" => "0" }
+          %p.city Санкт-Петербург
+          %p <span class="red">(812)</span> 333-46-00
+          %p
+            пр. Обуховской обороны,
+            %br
+            д. 112, к.2, литер И
+        .contacts-section__msk{ :role => "offices-link", "data-order" => "1" }
+          %p.city Москва
+          %p <span class="red">(495)</span> 647-05-85
+          %p
+            Остаповский проезд,
+            %br
+            д.3, строение 23
+    #contacts-map.contacts-section__map
+  %footer.footer_main
+    .footer_main__social
+      %a{ :href => "#", :target => "_blank" } Fb
+      %a{ :href => "#", :target => "_blank" } Vk
+      %a{ :href => "#", :target => "_blank" } Tw
+    .footer_main__copy
+      El Fidel<br>
+      digital agency<br>
+      2014

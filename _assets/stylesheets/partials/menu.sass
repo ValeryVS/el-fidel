@@ -1,0 +1,37 @@
+.menu-main
+  display: none
+  &.active
+    +flexbox((display: box, box-orient: vertical, box-align: center, box-pack: center), $version: 1)
+    +flexbox((display: flexbox, flex-direction: column, flex-align: center, flex-pack: center), $version: 2)
+    +flexbox((display: flex, flex-direction: column, align-items: center, justify-content: center))
+  position: fixed
+  z-index: 1
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: $elfidel-color--1-alpha
+  +animation(fadeIn 400ms linear forwards)
+  a
+    font-size: 54px
+    font-weight: 300
+    color: #FFF
+    &:hover
+      color: #FFF
+
+.menu-main__open
+  position: fixed
+  z-index: 1
+  right: 20px
+  top: 20px
+  width: 34px
+  height: 25px
+  background: url(images/menu.svg) 0 0 no-repeat
+
+.menu-main__close
+  position: absolute
+  right: 30px
+  top: 30px
+  width: 28px
+  height: 28px
+  background: url(images/close.svg) 0 0 no-repeat

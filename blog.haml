@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+.section{ :role => "section", "data-size" => "100vh" }
+
+  .blog-head-section
+    .blog-head__image-cont{ :role => "blog-image-cont" }
+      %img.blog-head__image{ :src => "assets/content/blog/blog_main.jpg" }
+    %article.blog-head__content
+      %h1.blog-head__title Блог
+      %p.blog-head__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+    %a.blog-head__logo{ :href => "/" } {{ site.title }}
+    .blog-head__copy
+      El Fidel<br>
+      digital agency<br>
+      2014
+    .blog-head__social
+      %a{ :href => "#", :target => "_blank" } Fb
+      %a{ :href => "#", :target => "_blank" } Vk
+      %a{ :href => "#", :target => "_blank" } Tw
+    .blog-head__hint
+
+.section{ :role => "section" }
+
+  .blog-list-section
+    .blog-list__subscribe-block
+      %a.btn.btn-blog{ :role => "blog-subscribe", :href => "#" } Подписаться
+      .blog-list__subscribe-text на еженедельные обновления
+
+    .blog-list__row
+      .blog-list__col
+        .blog-item
+          %img.blog-item__image{ :src => "assets/content/blog/blog01.png" }
+          .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+          .blog-item__info
+            .blog-item__date 24.08
+            .blog-item__author
+              %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
+              %img.blog-item__avatar{ :src => "assets/content/avatar2.png" }
+        .blog-item
+          %img.blog-item__image{ :src => "assets/content/blog/blog03.png" }
+          .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+          .blog-item__info
+            .blog-item__date 24.08
+            .blog-item__author
+              %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
+      .blog-list__col_padding
+        .blog-item
+          %img.blog-item__image{ :src => "assets/content/blog/blog02.png" }
+          .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+          .blog-item__info
+            .blog-item__date 24.08
+            .blog-item__author
+              %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
+
+    .blog-list-horizontal
+      This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+
+    .blog-list__row
+      .blog-list__col_padding
+        .blog-item
+          %img.blog-item__image{ :src => "assets/content/blog/blog04.png" }
+          .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+          .blog-item__info
+            .blog-item__date 24.08
+            .blog-item__author
+              %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
+        .blog-item
+          %img.blog-item__image{ :src => "assets/content/blog/blog06.png" }
+          .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+          .blog-item__info
+            .blog-item__date 24.08
+            .blog-item__author
+              %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
+      .blog-list__col
+        .blog-item
+          %img.blog-item__image{ :src => "assets/content/blog/blog05.png" }
+          .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+          .blog-item__info
+            .blog-item__date 24.08
+            .blog-item__author
+              %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
+        .blog-item_career
+          .blog-item_career__title Вакансия!
+          .blog-item_career__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files.
+          %a.blog-item_career__more{ :href => "#" } Подробнее
+
+    .blog-list__more-cont
+      %a.btn.btn-blog{ :role => "blog-more", :href => "#" } Загрузить еще
+
+  .projects-slider-section_black
+    .projects-slider__title.color-white Наши проекты
+    .projects-slider-list__wrapper
+      .projects-slider-list{ :role => "projects-slider" }
+        %a.projects-slider-item{ :href => "#" }
+          %img{ :src => "assets/images/about/001.png" }
+        %a.projects-slider-item{ :href => "smolensky.html" }
+          %img{ :src => "assets/images/about/002.png" }
+        %a.projects-slider-item{ :href => "#" }
+          %img{ :src => "assets/images/about/003.png" }
+      .bx-controls
+        #projects-slider-prev
+        #projects-slider-next
+
+  %footer.footer_black
+    .footer__social
+      %a{ :href => "#", :target => "_blank" } Fb
+      %a{ :href => "#", :target => "_blank" } Vk
+      %a{ :href => "#", :target => "_blank" } Tw
+    .footer__copy
+      El Fidel<br>
+      digital agency<br>
+      2014

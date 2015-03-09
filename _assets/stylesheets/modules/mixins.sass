@@ -1,0 +1,47 @@
+=my-flex-center
+  +flexbox((display: box, box-align: center, box-pack: center), $version: 1)
+  +flexbox((display: flexbox, flex-align: center, flex-pack: center), $version: 2)
+  +flexbox((display: flex, align-items: center, justify-content: center))
+
+=my-flex-column
+  +flexbox((display: box, box-orient: vertical), $version: 1)
+  +flexbox((display: flexbox, flex-direction: column), $version: 2)
+  +flexbox((display: flex, flex-direction: column))
+
+=my-flex-item
+  +flexbox((box-flex: 1), $version: 1)
+  +flexbox((flex: 1 0 auto), $version: 2)
+  +flexbox((flex: 1 0 auto))
+
+=translate3d-default
+  +transform(translate3d(0, 0, 0))
+  +backface-visibility(hidden)
+
+=background-cover
+  +translate3d-default
+  background-size: cover
+
+=background-contain
+  +translate3d-default
+  background-size: contain
+
+=vertical-middle-cont
+  +vertical-align-cont(middle)
+
+=vertical-align-cont($align)
+  white-space: nowrap
+  &:after
+    content: ' '
+    height: 100%
+    width: 0
+    display: inline-block
+    vertical-align: $align
+    margin-left: -0.25em
+
+=vertical-middle-item
+  +vertical-align-item(middle)
+
+=vertical-align-item($align)
+  display: inline-block
+  vertical-align: $align
+  white-space: normal

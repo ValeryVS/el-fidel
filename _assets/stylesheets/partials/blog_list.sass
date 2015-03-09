@@ -1,0 +1,110 @@
+$blog-list-glutter: 30px
+
+$module: blog-list
+
+.#{$module}-section
+  overflow: hidden
+  position: relative
+
+.#{$module}-horizontal
+  margin-top: 50px
+  margin-bottom: 50px
+  width: 90%
+  max-width: 800px
+  margin-left: auto
+  margin-right: auto
+  padding-left: $blog-list-glutter/2
+  padding-right: $blog-list-glutter/2
+  font-size: 26px
+  text-align: center
+
+.#{$module}__row
+  +clearfix
+  width: 90%
+  max-width: 800px
+  margin-left: auto
+  margin-right: auto
+
+.#{$module}__col
+  +make-xs-column(6, $blog-list-glutter)
+
+.#{$module}__col_padding
+  @extend .#{$module}__col
+  padding-top: 80px
+
+.#{$module}__more-cont
+  margin-top: 50px
+  margin-bottom: 50px
+  text-align: center
+
+.#{$module}__subscribe-block
+  position: absolute
+  top: 10px
+  @media only screen and (max-width: 1199px)
+    left: 50%
+    margin-left: 50px
+  @media only screen and (min-width: 1200px)
+    left: 50%
+    margin-left: 430px
+  text-align: center
+
+.#{$module}__subscribe-text
+  margin-top: 10px
+  color: #CCC
+
+$module: blog-item
+
+.#{$module}
+  margin-bottom: 30px
+
+.#{$module}__image
+  margin-bottom: 10px
+  max-width: 100%
+
+.#{$module}__text
+  margin-bottom: 20px
+  font-size: 16px
+
+.#{$module}_career
+  @extend .#{$module}
+  padding-top: 200px
+  padding-left: 100px
+
+.#{$module}_career__title
+  font-size: 20px
+  color: $elfidel-color--1
+  margin-bottom: 15px
+
+.#{$module}_career__text
+  margin-bottom: 15px
+  font-size: 16px
+
+$info-size: 50px
+
+.#{$module}__info
+  +clearfix
+
+.#{$module}__date
+  display: inline-block
+  font-size: 12px
+  line-height: $info-size
+  +transform(rotate(-90deg))
+
+.#{$module}__author
+  float: right
+
+.#{$module}__avatar
+  width: $info-size
+  height: $info-size
+  +border-radius($info-size/2)
+  &:not(:last-child)
+    margin-right: 5px
+
+.btn-blog
+  margin-top: 20px
+  border: 1px solid $text-color
+  color: $text-color
+  padding: 10px 42px
+  +border-radius(21px)
+  &:hover
+    color: $text-color

@@ -1,0 +1,110 @@
+---
+layout: default
+scroll-type: page-horizontal
+---
+
+.section.project-video-section{ :role => "section-video", "data-size" => "80vw" }
+  %video{ :preload => "auto", :autoplay => "autoplay", :loop => "loop", :muted => "muted", "data-video-bg" => "true"  }
+    %source{ :src => "assets/video/smolensky.mp4" }
+  %a.project-video__logo{ :href => "/" } {{ site.title }}
+  .project-video__copy
+    El Fidel<br>
+    digital agency<br>
+    2014
+  .project-video__social
+    %a{ :href => "#", :target => "_blank" } Fb
+    %a{ :href => "#", :target => "_blank" } Vk
+    %a{ :href => "#", :target => "_blank" } Tw
+
+.section.smolensky-section{ :role => "section-content", "data-scroll-begin" => "0.8" }
+  .smolensky__parallax1{ :role => "parallax-style-item", "data-parallax-type" => "back" }
+  .smolensky__parallax2{ :role => "parallax-style-item", "data-parallax-type" => "back" }
+  .smolensky__parallax3{ :role => "parallax-style-item", "data-parallax-type" => "back" }
+  .smolensky__1{ :role => "project-block" }
+    .smolensky__1_content
+      .smolensky__1_img
+        %img{ :src => "assets/images/smolensky_case/001.png" }
+      .smolensky__1_text
+        %h1.smolensky__1__title Смоленский
+        %p Разработка сайта и визуальной концепции для торгового комплекса Смоленский Пассаж в Москве.
+        .project-about{ :role => "project-about" } О проекте
+  .smolensky__3{ :role => "project-block" }
+    .smolensky__3__title
+    .big
+      %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+    %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+  .smolensky__4{ :role => "project-block" }
+    .smolensky__4_content
+      .smolensky__4_1
+        %img{ :src => "assets/images/smolensky_case/002.png" }
+  .smolensky__5{ :role => "project-block" }
+    .smolensky__5_content
+      .smolensky__5_1
+        %img{ :src => "assets/images/smolensky_case/003_1.png" }
+      .smolensky__5_2
+        %img{ :src => "assets/images/smolensky_case/003_2.png" }
+  .smolensky__6{ :role => "project-block" }
+    .smolensky__6_content.big
+      %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+    .smolensky__6_img
+      %img{ :src => "assets/images/smolensky_case/004.png" }
+  .smolensky__7{ :role => "project-block" }
+    .smolensky__7_img
+      %img{ :src => "assets/images/smolensky_case/005.png" }
+    .smolensky__7_content
+      %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+  .smolensky__8{ :role => "project-block" }
+    .smolensky__8_content
+      .smolensky__8_1
+        %img{ :src => "assets/images/smolensky_case/006_1.png" }
+      .smolensky__8_2
+        %img{ :src => "assets/images/smolensky_case/006_2.png" }
+      .smolensky__8_3
+        %img{ :src => "assets/images/smolensky_case/006_3.png" }
+  .smolensky__parallax4{ :role => "parallax-style-item", "data-parallax-type" => "front" }
+  .smolensky__parallax5{ :role => "parallax-style-item", "data-parallax-type" => "front" }
+  .smolensky__parallax6{ :role => "parallax-style-item", "data-parallax-type" => "front" }
+  .smolensky__parallax7{ :role => "parallax-style-item", "data-parallax-type" => "front" }
+  .smolensky__parallax8{ :role => "parallax-style-item", "data-parallax-type" => "front" }
+  .smolensky__parallax9{ :role => "parallax-style-item", "data-parallax-type" => "front" }
+
+.section.project-end-section{ :role => "section-info" }
+
+  .project-info-section
+    .project-info__top
+      .project-info__top__left
+        .project-info__top__left__title
+          Смоленский
+        .project-info__top__left__content
+          %p This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
+      .project-info__top__right
+        .project-info__top__right__title
+          %a{ :href => "http://smolensky.ru/", :target => "_blank" } www.smolenskiy.ru
+        .project-info__top__right__content
+          лайк
+          %br
+          %br
+          лайк
+          %br
+          %br
+          лайк
+    .project-info__people
+      .project-info__people__title.small.gray Над проектом работали
+      .project-info__people__item
+        %p Ксения Троицкая
+        %p.small.gray project manager
+      .project-info__people__item
+        %p Михаил Новожилов
+        %p.small.gray art director
+      .project-info__people__item
+        %p Дарья Вершинина
+        %p.small.gray ux design
+      .project-info__people__item
+        %p Петр Стилавин
+        %p.small.gray web desibg
+      .project-info__people__item
+        %p Никита Ковалев
+        %p.small.gray code
+
+  %a.project-next-section.smolensky__next{ :href => "bar17.html" }
+    .project-next__text Следующий<br> проект

@@ -1,0 +1,25 @@
+---
+---
+
+!!! 5
+%html{ :role => "{% if page.scroll-type %}{{page.scroll-type}}{% else %}page-vertical{% endif %}" }
+  %head
+    %meta{ :charset => 'utf-8' }
+    %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge' }
+    %title {% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}
+    {% if page.description %}
+    %meta{ :name => 'description', :content => '{{ page.description }}' }
+    {% endif %}
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1' }
+    %meta{ :property => 'og:title', :content => '{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}' }
+    %meta{ :property => 'og:description', :content => '{{ page.description }}' }
+    {% stylesheet app %}
+    {% javascript modernizr %}
+  %body
+    .loader-logo
+    .page{ :role => "page" }
+      {% include_haml header.haml %}
+      {{ content }}
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    {% javascript app %}
+    {% javascript script %}
