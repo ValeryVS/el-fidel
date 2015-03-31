@@ -1,9 +1,9 @@
 .menu-main
+  +vertical-align-cont(middle)
+  text-align: center
   display: none
   &.active
-    +flexbox((display: box, box-orient: vertical, box-align: center, box-pack: center), $version: 1)
-    +flexbox((display: flexbox, flex-direction: column, flex-align: center, flex-pack: center), $version: 2)
-    +flexbox((display: flex, flex-direction: column, align-items: center, justify-content: center))
+    display: block
   position: fixed
   z-index: 1
   left: 0
@@ -13,6 +13,7 @@
   background-color: $elfidel-color--1-alpha
   +animation(fadeIn 400ms linear forwards)
   a
+    display: block
     font-size: 54px
     font-weight: 300
     color: #FFF
@@ -35,3 +36,6 @@
   width: 28px
   height: 28px
   background: url(images/close.svg) 0 0 no-repeat
+
+.menu-main__content
+  +vertical-align-item(middle)

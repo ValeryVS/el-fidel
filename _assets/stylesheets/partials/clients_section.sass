@@ -50,7 +50,10 @@ $module: clients-section
   top: 0
   width: 50%
   height: 100%
-  +my-flex-center
+  +vertical-align-cont(middle)
+  text-align: center
+  >img
+    +vertical-align-item(middle)
 
 .clients-item__right
   position: absolute
@@ -60,4 +63,9 @@ $module: clients-section
   height: 100%
   padding-left: 60px
   padding-right: 60px
-  +my-flex-center
+  +vertical-align-cont(middle)
+  text-align: center
+
+.clients-item__right__content
+  +vertical-align-item(middle)
+  text-align: left
