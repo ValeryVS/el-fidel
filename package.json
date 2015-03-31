@@ -1,0 +1,21 @@
+{
+  "name": "el-fidel",
+  "version": "1.0.0",
+  "description": "El-fidel site",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ValeryVS/el-fidel.git"
+  },
+  "author": "ValeryVS <valery.vs.va@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/ValeryVS/el-fidel/issues"
+  },
+  "homepage": "https://github.com/ValeryVS/el-fidel"
+}

@@ -2,7 +2,7 @@
 #= require nprogress/nprogress.js
 #= require skrollr/dist/skrollr.min.js
 #= require scrollr-menu/dist/skrollr.menu.min.js
-#= require bxslider/jquery.bxslider.min.js
+#= require bxslider/dist/jquery.bxslider.min.js
 
 #= require initiates
 #= require partials/menu

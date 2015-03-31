@@ -1,6 +1,7 @@
 .idea
 .assets
 .sass-cache
+node_modules
 _assets/bower_components
 _site
 
