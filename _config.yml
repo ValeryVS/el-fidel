@@ -4,6 +4,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - bower.json
+  - package.json
   - config.rb
   - .git
   - .bowerrc
