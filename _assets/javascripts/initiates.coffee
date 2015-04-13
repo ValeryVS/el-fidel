@@ -2,6 +2,13 @@
 @mobileCheck = ->
   (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)
 
+@ieCheck = ->
+  if /MSIE (\d+\.\d+);/.test(navigator.userAgent) #test for MSIE x.x
+    ieversion = new Number(RegExp.$1) # capture x.x portion and store as a number
+    return ieversion
+  else if /Trident/.test(navigator.userAgent)
+    return 10 # 10+ IE
+
 # role selector
 @role = (s) -> "[role=\"#{s}\"]"
 

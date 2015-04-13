@@ -198,7 +198,10 @@ Resize = ->
 
   return
 
-NProgress.start()
+if ieCheck() < 10
+  $('body').prepend '<div class="oldIE">Вы использутете устаревший браузер. Пожалуйста <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a> для корректного отображения интернет сайтов.</div>'
+else
+  NProgress.start()
 
 window.onload = ->
   Resize()
