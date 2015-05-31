@@ -2,9 +2,11 @@
 #= require nprogress/nprogress.js
 #= require skrollr/dist/skrollr.min.js
 #= require scrollr-menu/dist/skrollr.menu.min.js
+#= require skrollr.decks.js
 #= require bxslider/dist/jquery.bxslider.min.js
 
 #= require initiates
+#= require partials/decks_page
 #= require partials/menu
 #= require partials/slider
 #= require partials/form
@@ -43,6 +45,7 @@ scrollrWidth = 1200
 isMobile = mobileCheck()
 
 Resize = ->
+  return if $('html').attr('role') is 'page-decks'
   skrollrEl.destroy()  if skrollrEl
   if $('body').attr('role') is 'page-vertical'
     $('body').height('auto')
@@ -56,7 +59,7 @@ Resize = ->
   windowHeight = $(window).height()
   $('[data-size="100vh"]').each ->
     $(@).height(windowHeight)  if $(@).height() < windowHeight
-  $('[data-size="80vw"]').width(windowWidth*0.8)  if windowWidth >= 1024
+  $('[data-size="80vw"]').width(windowWidth*0.8)#  if windowWidth >= 1024
   $('[data-size="100vh-scrollr"]').height(windowHeight)  if windowWidth > scrollrWidth
   $(role('project-block')).css
     "padding-top": windowHeight*0.15

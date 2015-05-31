@@ -17,7 +17,8 @@
     "bxslider": "https://github.com/stevenwanderski/bxslider-4.git",
     "jquery": "~2.1.3",
     "nprogress": "~0.1.6",
-    "scrollr-menu": "git://github.com/Prinzhorn/skrollr-menu.git",
-    "skrollr": "~0.6.29"
+    "skrollr": "~0.6.29",
+    "skrollr-decks": "~1.0.5",
+    "skrollr-menu": "~1.0.2"
   }
 }

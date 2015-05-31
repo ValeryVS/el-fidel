@@ -1,0 +1,19 @@
+.skrollr-deck
+  position: relative
+  box-sizing: border-box
+  text-align: center
+  z-index: 100
+  background-color: #FFF
+
+.float-void
+  visibility: hidden
+
+.float-deck
+  +translate3d-default
+  background-color: #FFF
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  &:not(.content-long)
+    height: 100%

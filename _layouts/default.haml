@@ -17,7 +17,7 @@
     {% javascript modernizr %}
   %body
     .loader-logo
-    .page{ :role => "page" }
+    %div{ :class => "page{% if page.page-mod %}-{{page.page-mod}}{% endif %}", :role => "page" }
       {% include_haml header.haml %}
       {{ content }}
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
