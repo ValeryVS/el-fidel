@@ -23,7 +23,7 @@ page-mod: decks
       %a{ :href => "#", :target => "_blank" } Tw
     .blog-head__hint
 
-.float-void.content-long{ :role => "skrollr-deck" }
+.float-void.free-height{ :role => "skrollr-deck" }
 
   .blog-list-section
     .blog-list__subscribe-block
@@ -32,8 +32,8 @@ page-mod: decks
 
     .blog-list__content{ :role => "blog-content" }
       .blog-list__row
-        .blog-list__col
-          .blog-item
+        .blog-list__col_wide{ :role => "blog-list-col" }
+          %a.blog-item{ :href => "blog-inner.html" }
             %img.blog-item__image{ :src => "assets/content/blog/blog01.png" }
             .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
             .blog-item__info
@@ -41,15 +41,15 @@ page-mod: decks
               .blog-item__author
                 %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
                 %img.blog-item__avatar{ :src => "assets/content/avatar2.png" }
-          .blog-item
+          %a.blog-item{ :href => "blog-inner.html" }
             %img.blog-item__image{ :src => "assets/content/blog/blog03.png" }
             .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
             .blog-item__info
               .blog-item__date 24.08
               .blog-item__author
                 %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
-        .blog-list__col_padding
-          .blog-item
+        .blog-list__col
+          %a.blog-item{ :href => "blog-inner.html" }
             %img.blog-item__image{ :src => "assets/content/blog/blog02.png" }
             .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
             .blog-item__info
@@ -61,23 +61,23 @@ page-mod: decks
         This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
 
       .blog-list__row
-        .blog-list__col_padding
-          .blog-item
+        .blog-list__col
+          %a.blog-item{ :href => "blog-inner.html" }
             %img.blog-item__image{ :src => "assets/content/blog/blog04.png" }
             .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
             .blog-item__info
               .blog-item__date 24.08
               .blog-item__author
                 %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
-          .blog-item
+          %a.blog-item{ :href => "blog-inner.html" }
             %img.blog-item__image{ :src => "assets/content/blog/blog06.png" }
             .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
             .blog-item__info
               .blog-item__date 24.08
               .blog-item__author
                 %img.blog-item__avatar{ :src => "assets/content/avatar1.png" }
-        .blog-list__col
-          .blog-item
+        .blog-list__col_wide{ :role => "blog-list-col" }
+          %a.blog-item{ :href => "blog-inner.html" }
             %img.blog-item__image{ :src => "assets/content/blog/blog05.png" }
             .blog-item__text This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You've got to like that.
             .blog-item__info
@@ -91,6 +91,8 @@ page-mod: decks
 
     .blog-list__more-cont
       %a.btn.btn-blog{ :role => "blog-more", :href => "#" } Загрузить еще
+
+.float-void.free-height{ :role => "skrollr-deck" }
 
   .projects-slider-section_black
     .projects-slider__title.color-white Наши проекты

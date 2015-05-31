@@ -6,7 +6,7 @@ if $('html').attr('role') is 'page-decks'
     attrs =
       'data-anchor-target':    '#' + $(this).attr('id')
       'data-smooth-scrolling': 'off'
-    if $(this).hasClass('content-long')
+    if $(this).hasClass('free-height')
       attrs['data-bottom-top'] = 'transform: translateY(' + windowHeight + 'px);'
       bottomPos = $(this).position().top + $(this).height() - windowHeight
       bottomSkroll = -$(this).height() + windowHeight
@@ -29,11 +29,11 @@ if $('html').attr('role') is 'page-decks'
 
   elFidel.resizeDecks = ->
     console.log 'resizeDecks'
-    return  if $('.content-long[role="skrollr-deck"]').length is 0
+    return  if $('.free-height[role="skrollr-deck"]').length is 0
     console.log 'resizeDecks'
     windowHeight = $(window).height()
     elToUpdate = []
-    $('.content-long[role="skrollr-deck"]').each ->
+    $('.free-height[role="skrollr-deck"]').each ->
       $(this).height 'auto'
       el = $('[data-anchor-target="#' + $(this).attr('id') + '"]')
       keys = []

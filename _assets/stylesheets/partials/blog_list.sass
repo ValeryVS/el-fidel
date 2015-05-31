@@ -25,11 +25,22 @@ $module: blog-list
   margin-left: auto
   margin-right: auto
 
-.#{$module}__col
-  +make-xs-column(6, $blog-list-glutter)
+.#{$module}__col,
+.#{$module}__col_wide
+  position: relative
+  float: left
+  min-height: 1px
+  padding-left: 15px
+  padding-right: 15px
 
-.#{$module}__col_padding
-  @extend .#{$module}__col
+.#{$module}__col
+  // +make-xs-column(6, $blog-list-glutter)
+  width: 45%
+
+.#{$module}__col_wide
+  width: 55%
+
+.#{$module}__content
   padding-top: 80px
 
 .#{$module}__more-cont
@@ -55,7 +66,18 @@ $module: blog-list
 $module: blog-item
 
 .#{$module}
+  display: block
   margin-bottom: 30px
+  color: $text-color
+  text-decoration: none
+  &:hover,
+  &.hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus
+    color: $text-color
+    text-decoration: none
 
 .#{$module}__image
   margin-bottom: 10px

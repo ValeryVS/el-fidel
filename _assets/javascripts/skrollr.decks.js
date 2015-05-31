@@ -193,7 +193,11 @@
       deck = segmentsList[i];
       deck.style.height = 'auto';
       deckHeight = deck.offsetHeight;
-      deck.style.height = (deckHeight < wndHeight ? wndHeight : deckHeight) + 'px';
+      if (( " " + deck.className + " " ).indexOf( " " + 'free-height' + " " ) >= 0) {
+        deck.style.height = deckHeight + 'px';
+      } else {
+        deck.style.height = (deckHeight < wndHeight ? wndHeight : deckHeight) + 'px';
+      }
     }
 
     skrollr.get().refresh(segmentsList);
