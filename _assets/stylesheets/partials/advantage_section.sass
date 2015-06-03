@@ -5,21 +5,29 @@ $module: advantage-section
   background-color: #FFF
   overflow: hidden
   width: 100%
-  @media only screen and (min-width: 1001px)
-    &:before,
-    &:after
-      content: ' '
-      position: absolute
-      z-index: 1
-      left: 0
-      width: 100%
-      height: 30%
-    &:before
-      top: 0
-      +background-image(linear-gradient(white 50%, transparent))
-    &:after
-      bottom: 0
-      +background-image(linear-gradient(transparent 50%, white))
+
+html:not(.skrollr)
+  .#{$module}
+    padding-top: 100px
+    padding-bottom: 100px
+
+.skrollr
+  .#{$module}
+    @media only screen and (min-width: 1001px)
+      &:before,
+      &:after
+        content: ' '
+        position: absolute
+        z-index: 1
+        left: 0
+        width: 100%
+        height: 30%
+      &:before
+        top: 0
+        +background-image(linear-gradient(white 50%, transparent))
+      &:after
+        bottom: 0
+        +background-image(linear-gradient(transparent 50%, white))
 
 @media only screen and (max-width: 1199px)
   .#{$module}__logo
@@ -40,9 +48,6 @@ $module: advantage-section
   @media only screen and (max-width: 1001px)
     padding: 50px
   @media only screen and (min-width: 1001px) and (max-width: 1199px)
-    position: absolute
-    left: 0
-    width: 100%
     margin-left: 50px
     margin-right: 50px
   @media only screen and (min-width: 1200px)
@@ -52,6 +57,13 @@ $module: advantage-section
     left: 50%
     margin-left: -600px
     top: 33.33%
+
+.skrollr
+  .advantage-list
+    @media only screen and (min-width: 1001px) and (max-width: 1199px)
+      position: absolute
+      left: 0
+      width: 100%
 
 $module: advantage-item
 
