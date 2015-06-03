@@ -1,4 +1,10 @@
-if $('html').attr('role') is 'page-decks'
+scrollrDecksWidth = 1200
+
+windowWidth = $(window).width()
+
+isMobile = mobileCheck()
+
+if $('html').attr('role') is 'page-decks' and windowWidth > scrollrDecksWidth and not isMobile
   decksConut = 0
   $('.float-void[role="skrollr-deck"]').each ->
     windowHeight = $(window).height()
