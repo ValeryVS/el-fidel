@@ -1,6 +1,21 @@
 $(role('mailfile-add')).click ->
   fileCount = $(role('mailfile-cont')+' input').length
-  $(role('mailfile-cont')).append('<div role="mail-file" class="mail-file-input-block"><input class="mail-file-input" type="file" name="file_'+fileCount+'" /><div role="mail-file-delete" class="glyphicon glyphicon-remove mail-file-input-delete"></div></div>')
+  inputHtml = '<div role="mail-file" class="mail-file-input-block">' +
+                '<div role="mail-file-button" class="mail-file-button">Выбрать файл</div>' +
+                '<div role="mail-file-name" class="mail-file-name"></div>' +
+                '<input class="mail-file-input" type="file" name="file_'+fileCount+'" />' +
+                '<div role="mail-file-delete" class="glyphicon glyphicon-remove mail-file-input-delete"></div>' +
+              '</div>'
+  $(role('mailfile-cont')).append inputHtml
+  $ '[name="file_'+fileCount+'"]'
+    .bind 'change', ->
+      name = this.files[0].name
+      console.log this, name
+      $(this)
+        .parent()
+        .find role 'mail-file-name'
+        .text name
+      return
   lastFile = $(role('mailfile-cont')+' input').length - 1
   $(role('mailfile-cont')+' input').eq(lastFile).click()
 
