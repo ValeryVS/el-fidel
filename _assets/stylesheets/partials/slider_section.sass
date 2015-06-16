@@ -77,6 +77,18 @@ $module: slider-section
     vertical-align: middle
     margin-left: -0.25em
 
+.cssanimations
+  .slider-item
+    &.active
+      z-index: 2
+      +animation(fadeIn 400ms linear forwards)
+
+.no-cssanimations
+  .slider-item
+    &.active
+      z-index: 2
+      opacity: 1
+
 .slider-list__menu
   position: absolute
   z-index: 3

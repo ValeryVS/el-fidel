@@ -5,12 +5,13 @@ $module: blog-list
 .#{$module}-section
   overflow: hidden
   position: relative
+  padding-top: 60px
 
 .#{$module}-horizontal
   margin-top: 50px
   margin-bottom: 50px
   width: 90%
-  max-width: 800px
+  max-width: 900px
   margin-left: auto
   margin-right: auto
   padding-left: $blog-list-glutter/2
@@ -21,7 +22,7 @@ $module: blog-list
 .#{$module}__row
   +clearfix
   width: 90%
-  max-width: 800px
+  max-width: 880px
   margin-left: auto
   margin-right: auto
 
@@ -30,33 +31,32 @@ $module: blog-list
   position: relative
   float: left
   min-height: 1px
-  padding-left: 15px
-  padding-right: 15px
+  padding-left: 10px
+  padding-right: 10px
 
 .#{$module}__col
   // +make-xs-column(6, $blog-list-glutter)
-  width: 45%
+  width: 380px
 
 .#{$module}__col_wide
-  width: 55%
+  width: 500px
 
 .#{$module}__content
   padding-top: 80px
 
 .#{$module}__more-cont
   margin-top: 50px
-  margin-bottom: 50px
+  margin-bottom: 450px
   text-align: center
+
+.#{$module}-subscribe
+  position: relative
+  z-index: 1
 
 .#{$module}__subscribe-block
   position: absolute
-  top: 10px
-  @media only screen and (max-width: 1199px)
-    left: 50%
-    margin-left: 50px
-  @media only screen and (min-width: 1200px)
-    left: 50%
-    margin-left: 430px
+  top: 0
+  right: 2%
   text-align: center
 
 .#{$module}__subscribe-text
@@ -67,7 +67,7 @@ $module: blog-item
 
 .#{$module}
   display: block
-  margin-bottom: 30px
+  margin-bottom: 100px
   color: $text-color
   text-decoration: none
   &:hover,
@@ -80,17 +80,19 @@ $module: blog-item
     text-decoration: none
 
 .#{$module}__image
-  margin-bottom: 10px
+  margin-bottom: 32px
   max-width: 100%
 
 .#{$module}__text
-  margin-bottom: 20px
+  margin-bottom: 60px
   font-size: 16px
+  line-height: 1.8
 
 .#{$module}_career
   @extend .#{$module}
-  padding-top: 200px
-  padding-left: 100px
+  padding-top: 100px
+  padding-left: 70px
+  padding-right: 70px
 
 .#{$module}_career__title
   font-size: 20px
@@ -124,6 +126,8 @@ $info-size: 50px
 
 .btn-blog
   margin-top: 20px
+  margin-left: 20px
+  margin-right: 20px
   border: 1px solid $text-color
   color: $text-color
   padding: 10px 42px

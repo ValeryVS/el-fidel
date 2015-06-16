@@ -24,10 +24,10 @@ html:not(.skrollr)
         height: 30%
       &:before
         top: 0
-        +background-image(linear-gradient(white 50%, transparent))
+        background-image: linear-gradient(#ffffff 50%, rgba(0, 0, 0, 0))
       &:after
         bottom: 0
-        +background-image(linear-gradient(transparent 50%, white))
+        background-image: linear-gradient(#ffffff 50%, rgba(0, 0, 0, 0))
 
 @media only screen and (max-width: 1199px)
   .#{$module}__logo

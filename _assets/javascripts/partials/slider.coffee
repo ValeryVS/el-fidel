@@ -35,11 +35,9 @@ $(role('about-us-slider')).bxSlider
 
 $(role('projects-slider')).bxSlider
   pager: false
-  nextSelector: '#projects-slider-next'
-  prevSelector: '#projects-slider-prev'
   nextText: ''
   prevText: ''
   slideWidth: 380
   minSlides: 1
   maxSlides: 3
-  slideMargin: 10
+  slideMargin: 20

@@ -21,13 +21,16 @@
 
 # smoothAnchorLinks()
 
+console.log Modernizr.csstransforms3d
+console.log Modernizr.csstransforms
 if Modernizr.csstransforms3d
-  @modernTranslateX = (x) -> 'translate3d('+x+'px,0px,0)'
-  @modernTranslateY = (y) -> 'translate3d(0px,'+y+'px,0)'
+  window.modernTranslateX = (x) -> 'translate3d('+x+'px,0px,0)'
+  window.modernTranslateY = (y) -> 'translate3d(0px,'+y+'px,0)'
 else if Modernizr.csstransforms
-else if Modernizr.csstransforms
-  @modernTranslateX = (x) -> 'translateX('+X+'px)'
-  @modernTranslateY = (y) -> 'translateY('+y+'px)'
+  window.modernTranslateX = (x) -> 'translateX('+X+'px)'
+  window.modernTranslateY = (y) -> 'translateY('+y+'px)'
+console.log modernTranslateX
+console.log modernTranslateY
 
 @clearScrollrData = (el) ->
   data = el.data()
@@ -44,8 +47,14 @@ scrollrWidth = 1200
 
 isMobile = mobileCheck()
 
+isOldIE = false
+ie = ieCheck()
+if ie and ie < 10
+  isOldIE = true
+
 Resize = ->
   return if $('html').attr('role') is 'page-decks'
+  # return if isOldIE
   skrollrEl.destroy()  if skrollrEl
   if $('body').attr('role') is 'page-vertical'
     $('body').height('auto')
@@ -58,7 +67,7 @@ Resize = ->
   windowWidth = $(window).width()
   windowHeight = $(window).height()
   $('[data-size="100vh"]').each ->
-    $(@).height(windowHeight)  if $(@).height() < windowHeight
+    $(@).height(windowHeight)  if $(@).height() <= windowHeight
   $('[data-size="80vw"]').width(windowWidth*0.8)#  if windowWidth >= 1024
   $('[data-size="100vh-scrollr"]').height(windowHeight)  if windowWidth > scrollrWidth
   $(role('project-block')).css
@@ -201,18 +210,18 @@ Resize = ->
 
   return
 
-if ieCheck() < 10
+if ieCheck() < 9
   $('body').prepend '<div class="oldIE">Вы использутете устаревший браузер. Пожалуйста <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a> для корректного отображения интернет сайтов.</div>'
 else
   NProgress.start()
 
-window.onload = ->
+$(window).bind 'load', ->
   Resize()
   NProgress.done()
   $('html').addClass('loaded')
 
-window.onresize = ->
+$(window).bind 'resize', ->
   Resize()
 
-window.onorientationchange = ->
+$(window).bind 'orientationchange', ->
   Resize()
