@@ -23,7 +23,7 @@ page-mod: decks
       %a{ :href => "#", :target => "_blank" } Tw
     .blog-head__hint
 
-.blog-list-subscribe{ :role => "blog-subscribe-cont" }
+.blog-list-subscribe{ :role => "blog-subscribe-cont", "data-anchor-target" => "[data-blog-list-section='true']", "data-bottom" => "visibility:hidden", "data-bottom-top" => "visibility:visible" }
   .blog-list__subscribe-block{ "data-anchor-target" => "[role='blog-subscribe-cont']", "data-1-top" => "position:absolute;", "data-top" => "position:fixed;" }
     %a.btn.btn-blog{ :role => "blog-subscribe", :href => "#" } Подписаться
     .blog-list__subscribe-text
@@ -44,7 +44,7 @@ page-mod: decks
               Обещаем - никакого спама.
             %input.btn.btn-blog.blue{ :type => "submit", :value => "Подписаться" }
 
-.float-void.free-height{ :role => "skrollr-deck" }
+.float-void.free-height{ :role => "skrollr-deck", "data-blog-list-section" => "true" }
   .blog-list-section
 
     .blog-list__content{ :role => "blog-content" }
