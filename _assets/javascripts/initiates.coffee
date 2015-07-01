@@ -42,3 +42,5 @@ window.elFidel = {}
         scrollTop: 0
       , 1000
       false
+
+elFidel.blogItemCount = 0

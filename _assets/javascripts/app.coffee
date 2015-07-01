@@ -5,7 +5,10 @@
 #= require skrollr.decks.js
 #= require bxslider/dist/jquery.bxslider.min.js
 
+#= require console.js
+
 #= require initiates
+#= require partials/blog_page
 #= require partials/decks_page
 #= require partials/menu
 #= require partials/slider
@@ -21,16 +24,12 @@
 
 # smoothAnchorLinks()
 
-console.log Modernizr.csstransforms3d
-console.log Modernizr.csstransforms
 if Modernizr.csstransforms3d
   window.modernTranslateX = (x) -> 'translate3d('+x+'px,0px,0)'
   window.modernTranslateY = (y) -> 'translate3d(0px,'+y+'px,0)'
 else if Modernizr.csstransforms
   window.modernTranslateX = (x) -> 'translateX('+X+'px)'
   window.modernTranslateY = (y) -> 'translateY('+y+'px)'
-console.log modernTranslateX
-console.log modernTranslateY
 
 @clearScrollrData = (el) ->
   data = el.data()

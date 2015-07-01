@@ -66,6 +66,40 @@ $(document).on 'click', role('blog-subscribe'), (event) ->
 
 $(document).on 'click', role('blog-more'), (event) ->
   event.preventDefault()
-  $('[role="blog-content"]').append('<div class="blog-list__row"> <div class="blog-list__col"> <a class="blog-item" href="blog-inner.html"> <img class="blog-item__image" src="assets/content/blog/blog04.png"> <div class="blog-item__text">This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You`ve got to like that.</div> <div class="blog-item__info"> <div class="blog-item__date">24.08</div> <div class="blog-item__author"> <img class="blog-item__avatar" src="assets/content/avatar1.png"> </div> </div> </a> <a class="blog-item" href="blog-inner.html"> <img class="blog-item__image" src="assets/content/blog/blog06.png"> <div class="blog-item__text">This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You`ve got to like that.</div> <div class="blog-item__info"> <div class="blog-item__date">24.08</div> <div class="blog-item__author"> <img class="blog-item__avatar" src="assets/content/avatar1.png"> </div> </div> </a> </div> <div class="blog-list__col_wide" role="blog-list-col"> <a class="blog-item" href="blog-inner.html"> <img class="blog-item__image" src="assets/content/blog/blog05.png"> <div class="blog-item__text">This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You`ve got to like that.</div> <div class="blog-item__info"> <div class="blog-item__date">24.08</div> <div class="blog-item__author"> <img class="blog-item__avatar" src="assets/content/avatar1.png"> </div> </div> </a> <div class="blog-item_career"> <div class="blog-item_career__title">Вакансия!</div> <div class="blog-item_career__text">This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files.</div> <a class="blog-item_career__more" href="#">Подробнее</a> </div> </div> </div>')
+  elFidel.addBlogItems('<a role="blog-item" class="blog-item" href="blog-inner.html">'+
+                          '<img class="blog-item__image" src="assets/content/blog/blog04.png">' +
+                          '<div class="blog-item__text">This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You`ve got to like that.</div>' +
+                          '<div class="blog-item__info">' +
+                            '<div class="blog-item__date">24.08</div>' +
+                            '<div class="blog-item__author">' +
+                              '<img class="blog-item__avatar" src="assets/content/avatar1.png">' +
+                            '</div>' +
+                          '</div>' +
+                        '</a>' +
+                        '<a role="blog-item" class="blog-item" href="blog-inner.html">' +
+                          '<img class="blog-item__image" src="assets/content/blog/blog06.png">' +
+                          '<div class="blog-item__text">This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You`ve got to like that.</div>' +
+                          '<div class="blog-item__info">' +
+                            '<div class="blog-item__date">24.08</div>' +
+                            '<div class="blog-item__author">' +
+                              '<img class="blog-item__avatar" src="assets/content/avatar1.png">' +
+                            '</div>' +
+                          '</div>' +
+                        '</a>' +
+                        '<a role="blog-item" class="blog-item" href="blog-inner.html">' +
+                          '<img class="blog-item__image" src="assets/content/blog/blog05.png">' +
+                          '<div class="blog-item__text">This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files. It features Zen Coding shortcuts for many CSS properties, making you look like some kind of stylesheet wizard to everyone around you. You`ve got to like that.</div>' +
+                          '<div class="blog-item__info">' +
+                            '<div class="blog-item__date">24.08</div>' +
+                            '<div class="blog-item__author">' +
+                              '<img class="blog-item__avatar" src="assets/content/avatar1.png">' +
+                            '</div>' +
+                          '</div>' +
+                        '</a>' +
+                        '<div class="blog-item_career">' +
+                          '<div class="blog-item_career__title">Вакансия!</div>' +
+                          '<div class="blog-item_career__text">This add-on adds syntax highlighting and tab/code completion for Sass and SCSS files.</div>' +
+                          '<a class="blog-item_career__more" href="#">Подробнее</a>' +
+                        '</div>')
   elFidel.resizeDecks();
   return

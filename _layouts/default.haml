@@ -10,9 +10,7 @@
     {% if page.description %}
     %meta{ :name => 'description', :content => '{{ page.description }}' }
     {% endif %}
-    {% if page.scroll-type == 'page-horizontal' %}
-    %meta{ :name => 'viewport', :content => 'height=device-height, initial-scale=1' }
-    {% else %}
+    {% if page.scroll-type != 'page-horizontal' %}
     %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1' }
     {% endif %}
     %meta{ :property => 'og:title', :content => '{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}' }
@@ -24,6 +22,6 @@
     %div{ :class => "page{% if page.page-mod %}-{{page.page-mod}}{% endif %}", :role => "page" }
       {% include_haml header.haml %}
       {{ content }}
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    / <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     {% javascript app %}
     {% javascript script %}

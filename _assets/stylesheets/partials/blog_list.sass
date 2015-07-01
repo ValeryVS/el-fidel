@@ -7,22 +7,11 @@ $module: blog-list
   position: relative
   padding-top: 60px
 
-.#{$module}-horizontal
-  margin-top: 50px
-  margin-bottom: 50px
-  width: 90%
-  max-width: 900px
-  margin-left: auto
-  margin-right: auto
-  padding-left: $blog-list-glutter/2
-  padding-right: $blog-list-glutter/2
-  font-size: 26px
-  text-align: center
-
 .#{$module}__row
   +clearfix
   width: 90%
-  max-width: 880px
+  max-width: 1012px
+  padding-right: 122px
   margin-left: auto
   margin-right: auto
 
@@ -41,8 +30,8 @@ $module: blog-list
 .#{$module}__col_wide
   width: 500px
 
-.#{$module}__content
-  padding-top: 80px
+// .#{$module}__content
+//   padding-top: 80px
 
 .#{$module}__more-cont
   margin-top: 50px
@@ -56,7 +45,8 @@ $module: blog-list
 .#{$module}__subscribe-block
   position: absolute
   top: 0
-  right: 2%
+  left: 50%
+  margin-left: 400px
   text-align: center
 
 .#{$module}__subscribe-text
@@ -68,6 +58,29 @@ $module: blog-item
 .#{$module}
   display: block
   margin-bottom: 100px
+  color: $text-color
+  text-decoration: none
+  &:hover,
+  &.hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus
+    color: $text-color
+    text-decoration: none
+
+.#{$module}_horizontal
+  display: block
+  margin-top: 50px
+  margin-bottom: 150px
+  width: 90%
+  max-width: 900px
+  margin-left: auto
+  margin-right: auto
+  padding-left: $blog-list-glutter/2
+  padding-right: $blog-list-glutter/2
+  font-size: 26px
+  text-align: center
   color: $text-color
   text-decoration: none
   &:hover,
