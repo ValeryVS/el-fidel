@@ -28,8 +28,7 @@ appendImage = (src) ->
   img.src = src
   return
 
-$(document).on 'click', '.blog-update', (event) ->
-  event.preventDefault()
+BlogUpdate = ->
   $.ajax
     url: '/tumblr.php?action=get_posts'
     type: 'GET'
@@ -38,15 +37,15 @@ $(document).on 'click', '.blog-update', (event) ->
     $('.blog-images img').remove()
     for i of data.posts
       appendImage(data.posts[i])
-    console.log 'success'
-    return
-  .fail ->
-    console.log 'error'
-    return
-  .always ->
-    console.log 'complete'
     return
   return
+
+$(document).on 'click', '.blog-update', (event) ->
+  event.preventDefault()
+  BlogUpdate()
+  return
+
+BlogUpdate()
 
 $(document).on 'click', '.blog-images img', (event) ->
   event.preventDefault()
